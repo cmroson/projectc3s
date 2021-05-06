@@ -36,7 +36,7 @@ pipeline{
         }
         stage('deploy to Kubernetes'){
 			steps {
-				withAWS(credentials: 'EKS-AmazonTest', region: 'us-east-1') {
+				withAWS(credentials: 'AWS_Credentials', region: 'us-east-1') {
 					sh "${kubectlPath} --kubeconfig=${kubeConfigPath} rollout restart deployment/helloworld-deployment"
 					sh "${kubectlPath} --kubeconfig=${kubeConfigPath} apply -f deployment.yaml"
 				}
