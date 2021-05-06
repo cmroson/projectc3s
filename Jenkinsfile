@@ -3,8 +3,8 @@ pipeline{
     environment {
         NAME = 'helloworld'
         kubeConfigPath = "/home/config"
-        registry = "cmroson/helloworld"
-        registryCredential = 'docker-login'
+        registry = "codejacksparrow/helloworld"
+        registryCredential = 'codejacksparrow'
         dockerImage = 'helloworld'
         kubectlPath = '/usr/local/bin/kubectl'
     }
