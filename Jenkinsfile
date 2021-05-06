@@ -4,7 +4,7 @@ pipeline{
         NAME = 'helloworld'
         kubeConfigPath = "/home/config"
         registry = "codejacksparrow/helloworld"
-        registryCredential = 'docker-login'
+        registryCredential = 'docker'
         dockerImage = ''
         kubectlPath = '/usr/local/bin/kubectl'
     }
